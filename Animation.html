@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"> </script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({left: '250px', height: '150px', width: '150px'}, 8000);
+  });
+});
+</script> 
+</head>
+<body>
+
+<button>Start Animation</button> <br>
+
+<div style="background:#dd180a; height:100px; width:100px; position:absolute;">   </div>
+
+</body>
+</html>
