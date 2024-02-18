@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <style>
+     
+      .container {
+        margin: 80px;
+        margin-left: 40%;
+        width: 350px;
+        height: 320px;
+        text-align: center;
+        padding-top: 50px;
+        border-radius: 5px;
+      
+      }
+
+      .inputFields {
+        margin: 10px;
+        font-family: "Segoe UI",  sans-serif;
+        font-size: 20px;
+      }
+
+      .button {
+        width: 150px;
+        height: 50px;
+        background-color: rgb(33, 37, 33);
+        border: 0px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+   
+      <div class="container">
+        <br />
+        <label class="inputFields" style="font-size: 24px; color: rgb(7, 5, 5)"
+          >Enter Name Of Month </label
+        >
+        <br/>
+        <input
+          type="text"
+          class="inputFields"
+          style="font-size: 24px; padding: 1px; outline: none"  id="months"  placeholder="i.e. Jan"/>
+        <br />
+        <button class="inputFields button" onclick="showDays()"> Enter
+        </button>
+        <br />
+        <label class="inputFields" style="font-size: 24px; color: rgb(7, 5, 5)" >Total No Of Days:
+        </label>
+        <br />
+        <label
+          class="inputFields"
+          id="days"
+          style="font-size: 30px; color: #d62828"
+        ></label>
+      </div>
+ 
+
+    <script>
+      function showDays() {
+        months = document.getElementById("months").value;
+
+        if (months == "Jan") {
+          document.getElementById("days").innerHTML = "31";
+        } else if (months == "Feb") {
+          document.getElementById("days").innerHTML = "28";
+        } else if (months == "March") {
+          document.getElementById("days").innerHTML = "31";
+        } else if (months == "April") {
+          document.getElementById("days").innerHTML = "30";
+        } else if (months == "May") {
+          document.getElementById("days").innerHTML = "31";
+        } else if (months == "June") {
+          document.getElementById("days").innerHTML = "30";
+        } else if (months == "July") {
+          document.getElementById("days").innerHTML = "31";
+        } else if (months == "August") {
+          document.getElementById("days").innerHTML = "31";
+        } else if (months == "Sept") {
+          document.getElementById("days").innerHTML = "30";
+        } else if (months == "Oct") {
+          document.getElementById("days").innerHTML = "31";
+        } else if (months == "Nov") {
+          document.getElementById("days").innerHTML = "30";
+        } else if (months == "Dec") {
+          document.getElementById("days").innerHTML = "31";
+        } else {
+          document.getElementById("days").innerHTML = "Invalid Input";
+        }
+      }
+    </script>
+  </body>
+</html>
