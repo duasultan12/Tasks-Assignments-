@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    body{
+        font-family: 'Segoe UI', Verdana, sans-serif;
+        font-size: 14px;    
+    }
+    h1
+    {
+        text-align: center;
+    }
+   
+  .slider
+  {
+      margin-top: 5%;
+      margin-left: 32%;
+
+  }
+    .slider img
+    {
+        display: none;
+       
+
+    }
+ 
+    
+    
+    .previous
+    {
+        border: none;
+        background-color: black;
+        color: white;
+        width: 80px;
+        height: 40px;
+      margin-left: 40%;
+
+  
+    }
+    .next
+    {
+        border: none;
+        background-color: black;
+        color: white;
+        width: 80px;
+        height: 40px;
+       margin-left:10% ;
+       
+    } 
+
+</style>
+    </head>
+    <body>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" 
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+         crossorigin="anonymous">
+        </script>   
+
+    <h1> Slider Images</h1>
+   
+<div class="slider">
+
+    <img src="https://images4.alphacoders.com/168/thumb-1920-168614.jpg" style="height: 30%; width: 53%;" class="image"> 
+      <img src="https://images.unsplash.com/photo-1422393462206-207b0fbd8d6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGNpdHl8ZW58MHx8MHx8&w=1000&q=80" class="image">
+    <img src="https://images.unsplash.com/photo-1547841243-eacb14453cd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGNpdHl8ZW58MHx8MHx8&w=1000&q=80" class="image">
+    <img src="https://scx2.b-cdn.net/gfx/news/2018/2-howmanypeopl.jpg" style="width: 53%;" class="image">
+    <img src="https://images.unsplash.com/photo-1569974498991-d3c12a504f95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlnJTIwY2l0eXxlbnwwfHwwfHw%3D&w=1000&q=80" class="image">
+</div>
+    <br> <br>
+    
+        <input type="button" value="Prev" class="previous" onclick="changeSlide(-1)">
+    <input type="button" value="Next" class="next" onclick="changeSlide(1)"> 
+
+
+<script>
+  var currentimg = 1;
+        displayImages(currentimg);
+  
+        function changeSlide(x) {
+              displayImages(currentimg += x);
+        }
+      function displayImages(x) {
+            var n;
+            var totalimg = document.getElementsByClassName("image");      
+            if (x > totalimg.length) {
+                currentimg = 1;
+            }
+            if (x < 1) {
+                currentimg = totalimg.length;
+            }
+            for (n = 0; n < totalimg.length; n++) {
+                totalimg[n].style.display = "none";
+            }
+            totalimg[currentimg - 1].style.display = "block";
+         }
+    </script>
+    
+
+    </script>
+
+
+    </body>
+</html>
